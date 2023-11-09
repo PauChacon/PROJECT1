@@ -13,7 +13,14 @@ public class Empresa {
     private String nombre;
     private String direccion;
     private String descripcion;
-    
+
+	public Empresa(Long id, String nombre, String direccion, String descripcion) {
+		this.id = id;
+		this.nombre = nombre;
+		this.direccion = direccion;
+		this.descripcion = descripcion;
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -38,5 +45,14 @@ public class Empresa {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-    
+
+	@Override
+	public String toString() {
+		return "Empresa{" +
+				"id=" + id +
+				", nombre='" + nombre + '\'' +
+				", direccion='" + direccion + '\'' +
+				", descripcion='" + descripcion + '\'' +
+				'}';
+	}
 }
